@@ -4,24 +4,84 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="resume.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:800|Aleo:300|Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
 
 <div id="root">
-    <h1>Ian Murphy</h1>
-    <page-break></page-break>
-    <div>page 2</div>
+    <circle-callout :size="100">{{ initials() }}</circle-callout>
+    <div class="right-top-header">
+        <h1 class="">{{ applicant }}</h1>
+        <h3 class="">{{ role }}</h3>
+        <h3 class="">{{ website }}</h3>
+    </div>
+
+    <flexbox>
+        <column width="30">
+            <simple-section name="Objective"><p>{{objective}}</p></simple-section>
+            <skills :data="skills"></skills>
+        </column>
+        <column width="65">
+            <experience :data="experience"></experience>
+            <education :data="education"></education>
+        </column>
+
+        <resume-footer>
+            <column width="20">
+                <div class="centered-column">
+                    <circle-callout :size="25">
+                        <i class="fas fa-envelope"></i>
+                    </circle-callout>
+                    <h6>{{email}}</h6>
+                </div>
+            </column>
+            <column width="20">
+                <div class="centered-column">
+                    <circle-callout :size="25">
+                        <i class="fab fa-github"></i>
+                    </circle-callout>
+                    <h6>{{github}}</h6>
+                </div>
+            </column>
+            <column width="20">
+                <div class="centered-column">
+                    <circle-callout :size="25">
+                        <i class="fab fa-linkedin"></i>
+                    </circle-callout>
+                    <h6>{{linkedin}}</h6>
+                </div>
+            </column>
+            <column width="20">
+                <div class="centered-column">
+                    <circle-callout :size="25">
+                        <i class="fas fa-phone"></i>
+                    </circle-callout>
+                    <h6>{{phone}}</h6>
+                </div>
+            </column>
+
+        </resume-footer>
+
+        <page-break></page-break>
+
+    </flexbox>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
 <script src="components.js"></script>
+<script src="data.js"></script>
 <script>
     window.addEventListener("load", function () {
         Resume = new Vue({
             el:"#root",
-            data:{
-
+            data:DATA,
+            methods:{
+                initials:function () {
+                    let name = this.applicant.split(" ");
+                    return name[0][0] + name[1][0];
+                }
             }
         })
     })
