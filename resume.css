@@ -1,0 +1,39 @@
+
+
+
+body{
+    background-color: whitesmoke;
+}
+
+#root{
+    max-width: 8.5in;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    padding: 20px;
+    background-color: white;
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-transform: uppercase;
+}
+
+h1{
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+@media print{
+    #root{
+        max-width: unset;
+        box-shadow: none;
+    }
+    .page-break{
+        page-break-after: always;
+    }
+
+    .page-break + *{
+        margin-top: 20px;
+    }
+}
+

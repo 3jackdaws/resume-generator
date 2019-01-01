@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="resume.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:800" rel="stylesheet">
+</head>
+<body>
+
+<div id="root">
+    <h1>Ian Murphy</h1>
+    <page-break></page-break>
+    <div>page 2</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script src="components.js"></script>
+<script>
+    window.addEventListener("load", function () {
+        Resume = new Vue({
+            el:"#root",
+            data:{
+
+            }
+        })
+    })
+</script>
+</body>
+</html>
