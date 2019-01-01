@@ -50,12 +50,17 @@ Vue.component("education", {
 Vue.component("skills", {
     props:['data'],
     template:`
-        <div class='section'>
-            <h3 class="header">Skills</h3>
+        <div class='skill section'>
+            <h3 class="header">
+                Skills
+                <span class="proficiency-header">Proficiency</span>
+            </h3>
             <div v-for='skill in data' class='sub-section'>
                 <h5 class="header">
                     {{ skill.name }} 
-                    <div class="proficiency-level">{{ skill.level }}</div>
+                    <div v-if="skill.level" class="proficiency-level">
+                        <div class="proficiency-bar" :style="{width:(skill.level*20)+'%'}"></div>
+                    </div>
                 </h5>
                  
                 <span>{{ skill.desc }}</span>

@@ -8,7 +8,7 @@ DATA = {
     website:"isogen.net",
     linkedin:"linkedin.com/in/ian-m-murphy/",
     email:"ian@isogen.net",
-    phone:"(503) 830-2275",
+    phone:"(503) 830 - 2275",
     github:"github.com/3jackdaws",
     objective:`Seeking a position at ${COMPANY} where I can advance my ${SKILL_TYPE} skills and become a valuable member of the team.`,
     experience:[
@@ -17,7 +17,7 @@ DATA = {
             title:"Cloud Automation Intern",
             from:"June 2018",
             to:"Dec 2018",
-            description:"",
+            description:"Lead efforts to consolidate steps involved in decommissioning enterprise infrastructure and developed self-service VM decommissioning tools. ",
             results:[
 
             ],
@@ -74,7 +74,7 @@ DATA = {
     education:[
         {
             type:"BS",
-            subject:"Computer Engineering Tech",
+            subject:"Software Engineering Tech",
             school:"Oregon Institute of Technology",
             date:"2018",
             summary:"GPA 3.61 · Courses included Software Testing, Data Structures, Design Patterns, Operating Systems, Embedded Networking, and Advanced Unix."

@@ -81,6 +81,14 @@
                 initials:function () {
                     let name = this.applicant.split(" ");
                     return name[0][0] + name[1][0];
+                },
+                skillsHaveProficiencies:function () {
+                    if(this.skills){
+                        for(let i = 0;i<this.skills.length;i++) {
+                            if (this.skills[i].level) return true;
+                        }
+                    }
+                    return false;
                 }
             }
         })

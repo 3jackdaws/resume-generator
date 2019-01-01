@@ -1,5 +1,8 @@
 
-
+:root {
+  /*--main-color: #00d3ff;*/
+  --main-color: #1dd985;
+}
 
 body{
     background-color: whitesmoke;
@@ -18,6 +21,8 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Poppins', sans-serif;
     margin-top:0;
 }
+
+
 
 .grid{
     display: flex;
@@ -47,13 +52,18 @@ h1{
 }
 
 .section > .header{
-    border-bottom: 0.3em solid #1dd985;
+    border-bottom: 0.3em solid var(--main-color);
     margin-bottom: 5px;
 }
 
 .header{
     margin-bottom: 2px;
+    margin-top: 15px;
+}
+
+.skill .header{
     margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .inline{
@@ -90,7 +100,7 @@ div.column{
 
 .tag{
     display: inline-block;
-    border: 1px solid #1dd985;
+    border: 1px solid var(--main-color);
     font-size: 0.7em;
     padding: 0 4px;
     border-radius: 500em;
@@ -99,12 +109,32 @@ div.column{
 }
 
 div.proficiency-level{
-    background-color: #1dd985;
-    padding: 0 6px;
+    background-color: white;
     display: inline-block;
+    border: 1px solid var(--main-color);
     border-radius: 500em;
-    line-height: 1.6em;
     float:right;
+    height: 6px;
+    width: 50px;
+    position: relative;
+    padding: 1px;
+    margin-top: 5px;
+}
+
+.proficiency-bar{
+    float: left;
+    background-color: var(--main-color);
+    height: 6px;
+    border-radius: 500em;
+    position: relative;
+}
+
+.proficiency-header{
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.5em;
+    float:right;
+    margin-top: 10px;
 }
 
 p,span{
@@ -123,9 +153,9 @@ div.circle{
     justify-content: center;
     align-items: center;
     border-radius: 500em;
-    border: 4px solid #1dd985;
+    border: 4px solid var(--main-color);
     font-family: 'Poppins', sans-serif;
-    background-color: #1dd985;
+    background-color: var(--main-color);
     /*color: white;*/
 }
 
