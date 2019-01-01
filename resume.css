@@ -130,6 +130,10 @@ div.circle{
     width: 100%;
 }
 
+.grid.bottom{
+    padding-top: 20px;
+}
+
 @media print{
     #root{
         max-width: unset;

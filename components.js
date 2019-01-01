@@ -28,7 +28,7 @@ Vue.component("experience", {
                 <ul class="results">
                     <li v-for="r in job.results"><span>{{ r }}</span></li>
                 </ul>
-                <h6 class="inline-header" v-if="job.technologies">Technologies:</h6><span v-for="tech in job.technologies" class="tech tag">{{tech}}</span>
+                <h6 class="inline-header" v-if="job.technologies">Tech Used:</h6><span v-for="tech in job.technologies" class="tech tag">{{tech}}</span>
             </div>
         </div>
     `
@@ -53,7 +53,7 @@ Vue.component("skills", {
         <div class='section'>
             <h3 class="header">Skills</h3>
             <div v-for='skill in data' class='sub-section'>
-                <h4 class="inline-header">{{ skill.name }}&middot;</h4> 
+                <h4 class="inline-header">{{ skill.name }} &middot;</h4> 
                 <span>{{ skill.desc }}</span>
             </div>
         </div>

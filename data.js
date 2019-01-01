@@ -1,3 +1,7 @@
+COMPANY = "COMPANY";
+SKILL_TYPE = "DEVELOPMENT";
+
+
 DATA = {
     applicant:"Ian Murphy",
     role:"Software Engineer",
@@ -6,7 +10,7 @@ DATA = {
     email:"ian@isogen.net",
     phone:"(503) 830-2275",
     github:"github.com/3jackdaws",
-    objective:"Testing 123",
+    objective:`Seeking a position at ${COMPANY} where I can advance my ${SKILL_TYPE} skills and become a valuable member of the team.`,
     experience:[
         {
             company:"Daimler Trucks NA",
@@ -72,14 +76,15 @@ DATA = {
         {
             type:"BS",
             subject:"Computer Engineering Tech",
-            school:"Oregon Insitute of Technology",
+            school:"Oregon Institute of Technology",
             date:"2018",
-            summary:""
+            summary:"GPA 3.61 · Courses included Software Testing, Data Structures, Design Patterns, Operating Systems, Embedded Networking, and Advanced Unix."
         }
     ],
     skills:[
         {
-            name:"HTML",
+            name:"Django",
+            level:4,
             desc:"Blah"
         },
 
