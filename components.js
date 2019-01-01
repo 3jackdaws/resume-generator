@@ -53,7 +53,11 @@ Vue.component("skills", {
         <div class='section'>
             <h3 class="header">Skills</h3>
             <div v-for='skill in data' class='sub-section'>
-                <h4 class="inline-header">{{ skill.name }} &middot;</h4> 
+                <h5 class="header">
+                    {{ skill.name }} 
+                    <div class="proficiency-level">{{ skill.level }}</div>
+                </h5>
+                 
                 <span>{{ skill.desc }}</span>
             </div>
         </div>

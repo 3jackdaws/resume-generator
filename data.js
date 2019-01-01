@@ -29,7 +29,6 @@ DATA = {
                 "Docker",
                 "Kubernetes",
                 "vmWare",
-
             ]
         },
         {
@@ -85,7 +84,37 @@ DATA = {
         {
             name:"Django",
             level:4,
-            desc:"Blah"
+            desc:"Proficient with Models, Forms, Middleware, Django templating, custom authentication backends."
+        },
+        {
+            name:"REST Framework",
+            level:3,
+            desc:"Experience with Generic Views, custom APIViews, Serializers, Authentication, Viewsets and Routers."
+        },
+        {
+            name:"Channels",
+            level:4,
+            desc:"Proficient with version 1 and 2, asynchronous programming, channel layers, background and WebSocket workers."
+        },
+        {
+            name:"Docker",
+            level:5,
+            desc:"Extemely proficient with Docker, Docker Compose, with experience containerizing existing applications and knowledge of advantages and shortfalls of application containers and microservice architectures."
+        },
+        {
+            name:"Git",
+            level:3,
+            desc:"Experience with using CLI Git and GitLab to collaborate on a team and control software versions."
+        },
+        {
+            name:"Python",
+            level:5,
+            desc:"Extreme proficiency with Python, its constructs, best practices, advantages and shortfalls.  Extensive knowledge of available libraries, inner workings of the cpython interpreter, and available package management tools."
+        },
+        {
+            name:"JavaScript",
+            level:3,
+            desc:"Proficiency with front-end JavaScript, the DOM, and operation of the JavaScript runtime environment."
         },
 
     ]
