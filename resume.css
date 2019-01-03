@@ -8,11 +8,35 @@ body{
     background-color: whitesmoke;
 }
 
+[v-cloak]{
+    display: none;
+}
+
 #root{
-    max-width: 8.5in;
+
+}
+
+.page{
+    width: 8.5in;
+    height: 11in;
+    position: relative;
     margin: 0 auto;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 15px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.page:first-child{
+    margin-top:0;
+}
+
+.page-footer{
+    justify-content: space-around;
+    padding-top: 20px;
+    position: absolute;
+    bottom:0;
+    left:0;
     background-color: white;
 }
 
@@ -31,9 +55,6 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
 }
 
-.grid.around{
-    justify-content: space-around;
-}
 
 
 
@@ -61,7 +82,7 @@ h1{
     margin-top: 15px;
 }
 
-.skill .header{
+.skill .sub-section .header{
     margin-top: 10px;
     margin-bottom: 0;
 }
@@ -94,7 +115,7 @@ div.column{
     margin: 0 5px;
 }
 
-.job .results{
+.results{
     margin: 5px 0;
 }
 
@@ -106,11 +127,12 @@ div.column{
     border-radius: 500em;
     margin-left: 3px;
     line-height: 1.5em;
+    text-transform: uppercase;
 }
 
-div.proficiency-level{
+.proficiency-level{
     background-color: white;
-    display: inline-block;
+    display: inline;
     border: 1px solid var(--main-color);
     border-radius: 500em;
     float:right;
@@ -128,6 +150,7 @@ div.proficiency-level{
     border-radius: 500em;
     position: relative;
 }
+
 
 .proficiency-header{
     text-transform: uppercase;
@@ -170,11 +193,11 @@ div.circle{
 }
 
 .grid.bottom{
-    padding-top: 20px;
+
 }
 
 @media print{
-    #root{
+    .page{
         max-width: unset;
         box-shadow: none;
     }
@@ -190,10 +213,6 @@ div.circle{
         background-color: white;
     }
 
-    .grid.bottom{
-        position: fixed;
-        bottom:0;
-        left:0;
-    }
+
 }
 

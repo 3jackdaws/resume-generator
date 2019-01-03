@@ -9,25 +9,27 @@
 </head>
 <body>
 
-<div id="root">
-    <circle-callout :size="100">{{ initials() }}</circle-callout>
-    <div class="right-top-header">
-        <h1 class="">{{ applicant }}</h1>
-        <h3 class="">{{ role }}</h3>
-        <h3 class="">{{ website }}</h3>
-    </div>
+<div id="root" v-cloak>
+    <page>
 
-    <flexbox>
-        <column width="30">
-            <simple-section name="Objective"><p>{{objective}}</p></simple-section>
-            <skills :data="skills"></skills>
-        </column>
-        <column width="65">
-            <experience :data="experience"></experience>
-            <education :data="education"></education>
-        </column>
+        <circle-callout :size="100">{{ initials() }}</circle-callout>
+        <div class="right-top-header">
+            <h1 class="">{{ applicant }}</h1>
+            <h3 class="">{{ role }}</h3>
+            <h3 class="">{{ website }}</h3>
+        </div>
 
-        <resume-footer>
+        <resume-content>
+            <column width="35">
+                <simple-section name="Objective"><p>{{objective}}</p></simple-section>
+                <skills :data="skills.slice(0, primarySkills)" header="Skills"></skills>
+            </column>
+            <column width="62">
+                <experience :data="experience"></experience>
+                <education :data="education"></education>
+            </column>
+        </resume-content>
+        <page-footer>
             <column width="20">
                 <div class="centered-column">
                     <circle-callout :size="25">
@@ -61,11 +63,18 @@
                 </div>
             </column>
 
-        </resume-footer>
-
-        <page-break></page-break>
-
-    </flexbox>
+        </page-footer>
+    </page>
+    <page>
+        <resume-content>
+            <column width="35">
+                <skills :data="skills.slice(primarySkills, primarySkills + secondarySkills)" header="Skills Overflow"></skills>
+            </column>
+            <column width="62">
+                <projects :data="projects"></projects>
+            </column>
+        </resume-content>
+    </page>
 
 </div>
 
@@ -82,7 +91,10 @@
                     let name = this.applicant.split(" ");
                     return name[0][0] + name[1][0];
                 },
-                skillsHaveProficiencies:function () {
+
+            },
+            computed:{
+                skillsHaveExperience:function () {
                     if(this.skills){
                         for(let i = 0;i<this.skills.length;i++) {
                             if (this.skills[i].level) return true;

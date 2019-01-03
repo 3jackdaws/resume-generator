@@ -3,16 +3,20 @@ Vue.component("page-break", {
     template:"<div class='page-break'></div>"
 });
 
-Vue.component("flexbox", {
+Vue.component("page", {
+    template:"<div class='page'><slot></slot></div>"
+});
+
+Vue.component("resume-content", {
     props:{
         "space-around":Boolean
     },
     template:"<div :class='{grid:true, around:spaceAround}'><slot></slot></div>"
 });
 
-Vue.component("resume-footer", {
+Vue.component("page-footer", {
 
-    template:"<div class='grid around bottom'><slot></slot></div>"
+    template:"<div class='page-footer grid'><slot></slot></div>"
 });
 
 
@@ -34,6 +38,24 @@ Vue.component("experience", {
     `
 });
 
+Vue.component("projects", {
+    props:['data'],
+    template:`
+        <div class='section'>
+            <h3 class="header">Personal Projects</h3>
+            <div v-for='project in data' class='project sub-section'>
+                <h5 class="header">{{ project.title }} &middot; {{ project.category }}</h5>
+                <p>{{ project.description }}</p>
+                <h6 class="header" style="margin-top: 5px;">Key Features</h6>
+                <ul class="results">
+                    <li v-for="r in project.features"><span>{{ r }}</span></li>
+                </ul>
+                <h6 class="inline-header" v-if="project.technologies">Tech Used:</h6><span v-for="tech in project.technologies" class="tech tag">{{tech}}</span>
+            </div>
+        </div>
+    `
+});
+
 Vue.component("education", {
     props:['data'],
     template:`
@@ -47,27 +69,39 @@ Vue.component("education", {
     `
 });
 
-Vue.component("skills", {
-    props:['data'],
+let Skills = Vue.component("skills", {
+    props:['data', 'header'],
     template:`
         <div class='skill section'>
             <h3 class="header">
-                Skills
-                <span class="proficiency-header">Proficiency</span>
+                {{ header }}
+                <span v-if="skillsHaveExperience" class="proficiency-header">Experience</span>
             </h3>
             <div v-for='skill in data' class='sub-section'>
                 <h5 class="header">
                     {{ skill.name }} 
-                    <div v-if="skill.level" class="proficiency-level">
-                        <div class="proficiency-bar" :style="{width:(skill.level*20)+'%'}"></div>
-                    </div>
+                    <span v-if="skill.level" class="proficiency-level">
+                        <span class="proficiency-bar" :style="{width:(skill.level*20)+'%'}"></span>
+                    </span>
                 </h5>
                  
                 <span>{{ skill.desc }}</span>
             </div>
         </div>
-    `
+    `,
+    computed:{
+        skillsHaveExperience:function () {
+            if(this.data){
+                for(let i = 0;i<this.data.length;i++) {
+                    if (this.data[i].level) return true;
+                }
+            }
+            return false;
+        }
+    }
 });
+
+Vue.extend(Skills)
 
 Vue.component("simple-section", {
     props:['name'],
