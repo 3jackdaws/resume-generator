@@ -44,7 +44,7 @@ Vue.component("projects", {
         <div class='section'>
             <h3 class="header">Personal Projects</h3>
             <div v-for='project in data' class='project sub-section'>
-                <h5 class="header">{{ project.title }} &middot; {{ project.category }}</h5>
+                <h5 class="header"><a class="no-decorate" :href="project.url">{{ project.title }} &middot; {{ project.category }}</a></h5>
                 <p>{{ project.description }}</p>
                 <h6 class="header" style="margin-top: 5px;">Key Features</h6>
                 <ul class="results">
@@ -69,7 +69,7 @@ Vue.component("education", {
     `
 });
 
-let Skills = Vue.component("skills", {
+Vue.component("skills", {
     props:['data', 'header'],
     template:`
         <div class='skill section'>
@@ -101,7 +101,6 @@ let Skills = Vue.component("skills", {
     }
 });
 
-Vue.extend(Skills)
 
 Vue.component("simple-section", {
     props:['name'],
