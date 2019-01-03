@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
     <link rel="stylesheet" href="resume.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:800|Aleo:300|Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -11,7 +11,6 @@
 
 <div id="root" v-cloak>
     <page>
-
         <circle-callout :size="100">{{ initials() }}</circle-callout>
         <div class="right-top-header">
             <h1 class="">{{ applicant }}</h1>
@@ -35,7 +34,7 @@
                     <circle-callout :size="25">
                         <i class="fas fa-envelope"></i>
                     </circle-callout>
-                    <h6>{{email}}</h6>
+                    <h6><a class="no-decorate" :href="'mailto:'+email">{{email}}</a></h6>
                 </div>
             </column>
             <column width="20">
@@ -43,7 +42,7 @@
                     <circle-callout :size="25">
                         <i class="fab fa-github"></i>
                     </circle-callout>
-                    <h6>{{github}}</h6>
+                    <h6><a class="no-decorate" :href="'https://'+github">{{github}}</a></h6>
                 </div>
             </column>
             <column width="20">
@@ -51,7 +50,7 @@
                     <circle-callout :size="25">
                         <i class="fab fa-linkedin"></i>
                     </circle-callout>
-                    <h6>{{linkedin}}</h6>
+                    <h6><a class="no-decorate" :href="'https://'+linkedin">{{linkedin}}</a></h6>
                 </div>
             </column>
             <column width="20">
@@ -78,7 +77,7 @@
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
 <script src="components.js"></script>
 <script src="data.js"></script>
 <script>
@@ -102,8 +101,18 @@
                     }
                     return false;
                 }
+            },
+            mounted:function () {
+                setTimeout(function () {
+                    document.querySelectorAll(".page").forEach(function (e) {
+                        e.classList.add("loaded");
+                    });
+                }, 1);
+
             }
-        })
+        });
+        document.title = `${DATA.resumeName} - ${DATA.applicant}`;
+
     })
 </script>
 </body>

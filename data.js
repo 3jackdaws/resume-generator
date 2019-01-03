@@ -3,6 +3,8 @@ PROBLEM_TYPE = "";
 
 
 DATA = {
+    resumeName:"General Resume",
+    resumeVersion:"2.0.1",
     applicant:"Ian Murphy",
     role:"Software/Solution Engineer",
     website:"isogen.net",
@@ -82,18 +84,48 @@ DATA = {
             summary:"GPA 3.61 · Emplaced a solid foundation for analyzing problems and providing practical solutions.  Courses included Software Testing, Data Structures, Design Patterns, Operating Systems, Embedded Networking, and Advanced Unix."
         }
     ],
-    primarySkills:6,
+    primarySkills:7,
     secondarySkills:20,
     skills:[
+        {
+            name:"Software Testing",
+            level:4,
+            desc:"Adept knowledge of testing best practices, test driven development and behavior driven development using frameworks similar to Cucumber."
+        },
+        {
+            name:"RESTful API Design",
+            level:4,
+            desc:"Extensive experience designing and developing RESTful APIs for Web Applications and Services."
+        },
+        {
+            name:"Jenkins",
+            level:3,
+            desc:"Experience using Jenkins to automate software distribution and site reliability tests."
+        },
+        {
+            name:"Java",
+            level:3,
+            desc:"Experience using Java to solve highly parallel computing problems and to create mobile apps."
+        },
         {
             name:"Python",
             level:5,
             desc:"Extreme proficiency with Python, its constructs, best practices, advantages and shortfalls.  Extensive knowledge of available libraries and PIP"
         },
+        // {
+        //     name:"C",
+        //     level:4,
+        //     desc:"Experience includes embedded networking and low level Linux development."
+        // },
         {
             name:"Docker",
             level:5,
             desc:"Extemely proficient with Docker, Docker Compose, with experience containerizing existing applications and knowledge of advantages and shortfalls of application containers and microservice architectures."
+        },
+        {
+            name:"Vue.JS",
+            level:3,
+            desc:"Moderate experience designing and developing Web applications with Vue.  This resume extensively uses Vue.js."
         },
         {
             name:"Web Development",
@@ -106,40 +138,20 @@ DATA = {
             desc:"Proficiency with front-end JavaScript, the DOM, and knowledge of the JavaScript runtime environment."
         },
         // {
-        //     name:"C",
+        //     name:"Django",
         //     level:4,
-        //     desc:"Experience includes embedded networking and low level Linux development."
+        //     desc:"Proficient with Models, Forms, Middleware, Django templating, custom authentication backends.  Extensive experience with add on frameworks such as DRF and Channels."
         // },
-        {
-            name:"Django",
-            level:4,
-            desc:"Proficient with Models, Forms, Middleware, Django templating, custom authentication backends.  Extensive experience with add on frameworks such as DRF and Channels."
-        },
         {
             name:"SQL - Postgres & MySQL",
             level:3,
             desc:"Intermediate knowledge of SQL syntax, dialogs, and features. Primary experience with PostgreSQL and MySQL."
         },
-        {
-            name:"C/C++",
-            level:3.5,
-            desc:"Experience includes embedded networking and low level Linux development. Moderately experienced with C++ and many language constructs."
-        },
-        {
-            name:"C#",
-            level:3,
-            desc:"Moderate experience writing Xamarin apps and Unity game logic.  Much formal schooling, including Testing and Design Patterns was in C#."
-        },
-        {
-            name:"Jenkins",
-            level:3,
-            desc:"Experience using Jenkins to automate software distribution and site reliability tests."
-        },
-        {
-            name:"Software Testing",
-            level:4,
-            desc:"Adept knowledge of testing best practices, test driven development and behavior driven development using frameworks similar to Cucumber."
-        },
+        // {
+        //     name:"C/C++",
+        //     level:3.5,
+        //     desc:"Experience includes embedded networking and low level Linux development. Moderately experienced with C++ and many language constructs."
+        // },
         // {
         //     name:"REST Framework",
         //     level:3,
@@ -151,6 +163,11 @@ DATA = {
         //     desc:"Proficient with version 1 and 2, asynchronous programming, channel layers, background and WebSocket workers."
         // },
         {
+            name:"C#",
+            level:3,
+            desc:"Moderate experience writing Xamarin apps and Unity game logic.  Much formal schooling, including Testing and Design Patterns was in C#."
+        },
+        {
             name:"Git",
             level:3,
             desc:"Experience with using CLI Git and GitLab to collaborate on a team and control software versions."
@@ -159,11 +176,6 @@ DATA = {
             name:"Node.js",
             level:2,
             desc:"Intermediate level experience with writing Node applications as both standalone web sites and Electron Apps."
-        },
-        {
-            name:"Java",
-            level:3,
-            desc:"Experience using Java to solve highly parallel computing problems and experience writing mobile apps."
         },
         {
             name:"Amazon Web Services",
