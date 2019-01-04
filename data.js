@@ -263,7 +263,6 @@ DATA = {
                 "Vue.js",
                 "HTML",
                 "Lots of CSS",
-
             ]
         },
 
