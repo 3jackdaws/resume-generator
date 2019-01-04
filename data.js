@@ -262,7 +262,7 @@ DATA = {
             technologies:[
                 "Vue.js",
                 "HTML",
-                "lots of CSS",
+                "Lots of CSS",
 
             ]
         },
