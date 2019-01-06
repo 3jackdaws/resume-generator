@@ -90,7 +90,7 @@ DATA = {
         {
             name:"Docker",
             level:5,
-            desc:"Extemely proficient with Docker, Docker Compose, with experience containerizing existing applications and knowledge of advantages and shortfalls of application containers and microservice architectures."
+            desc:"Extreme proficiency with Docker, Docker Compose, with experience containerizing existing applications and knowledge of advantages and shortfalls of application containers and microservice architectures."
         },
         {
             name:"Python",
