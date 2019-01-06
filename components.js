@@ -141,9 +141,10 @@ Vue.component("circle-menu", {
     props:{size:Number, info:Object},
     template:`
         <div @click="toggleOpen()" :class="{circle:true, open:open, openable:true}" :style="{height:size + 'px', width:size + 'px',fontSize: (size/25) + 'em'}">
-            <div class="initial">
+            <div class="initial" v-if="!open">
                 <slot></slot>
             </div>
+            <div v-if="open" title="Close">X</div>
             <div class="application-info" @click.stop="">
                 <div>
                     <h5>Application Version</h5> 

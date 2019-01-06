@@ -210,6 +210,7 @@ p{
     user-select: none;
     cursor: pointer;
     transition: transform 70ms;
+
 }
 
 .circle:after{
@@ -231,12 +232,17 @@ p{
     z-index: 99999999;
 }
 
+.circle.open{
+
+}
+
 .circle.open:after{
     content: '';
     box-shadow: 0 0 0 15in var(--main-color);
 }
 
 .circle .application-info{
+    visibility: hidden;
     opacity: 0;
     transition: opacity 0.2s;
     position: absolute;
@@ -261,6 +267,7 @@ p{
 }
 
 .circle.open .application-info{
+    visibility: visible;
     opacity: 1;
 }
 
