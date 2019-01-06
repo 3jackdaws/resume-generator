@@ -119,8 +119,65 @@ Vue.component("column", {
 });
 
 Vue.component("circle-callout", {
-    props:{size:Number, outline:Boolean},
+    props:{size:Number, info:Boolean, open:Boolean},
     template:`
-        <div :class="{circle:true, outline:outline}" :style="{height:size + 'px', width:size + 'px',fontSize: (size/25) + 'em'}"><slot></slot></div>
-    `
+        <div @click="toggleOpen()" :class="{circle:true, open:open, openable:!!info}" :style="{height:size + 'px', width:size + 'px',fontSize: (size/25) + 'em'}">
+            <div><slot></slot></div>
+            <div class="application-info">
+                {{info.appVersion}}
+            </div>
+        </div>
+    `,
+    methods:{
+        toggleOpen:function () {
+            if(!this.info) return;
+            this.open = !this.open;
+        }
+    }
+
+});
+
+Vue.component("circle-menu", {
+    props:{size:Number, info:Object},
+    template:`
+        <div @click="toggleOpen()" :class="{circle:true, open:open, openable:true}" :style="{height:size + 'px', width:size + 'px',fontSize: (size/25) + 'em'}">
+            <div class="initial">
+                <slot></slot>
+            </div>
+            <div class="application-info" @click.stop="">
+                <div>
+                    <h5>Application Version</h5> 
+                    <h2>V{{info.appVersion}}</h2>
+                </div>
+                <div>
+                    <h5>Resume Version</h5> 
+                    <h2>V{{info.resumeVersion}}</h2>
+                </div>
+            </div>
+        </div>
+    `,
+    data:function(){
+        return {open:false, clicks:0, decrementInterval:null}
+    },
+    methods:{
+        toggleOpen:function () {
+            if(!this.info) return;
+            if(this.open){
+                this.open = false;
+            }else{
+                this.clicks++;
+                if(this.clicks >= 6){
+                    this.open = true;
+                }else{
+                    if(this.decrementInterval) clearInterval(this.decrementInterval);
+                    this.decrementInterval = setTimeout(function(){
+                        this.clicks = 0;
+                    }.bind(this), 1000);
+
+
+                }
+            }
+        }
+    }
+
 });

@@ -6,7 +6,10 @@
 
 body{
     background-color: whitesmoke;
+}
 
+body.noscroll{
+    overflow: hidden;
 }
 
 [v-cloak]{
@@ -26,6 +29,7 @@ body{
     padding: 15px;
     background-color: white;
     margin-top: 20px;
+    overflow: hidden;
 
 }
 
@@ -34,6 +38,7 @@ body{
     transition-duration: 1s;
     transition-property: opacity;
     opacity: 0;
+
 }
 
 .page.loaded > *{
@@ -105,8 +110,9 @@ h1{
 
 .skill .sub-section .header{
     margin-top: 10px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
+
 
 .inline{
     display: inline;
@@ -192,7 +198,7 @@ p{
     margin-bottom: 5px;
 }
 
-div.circle{
+.circle{
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -201,12 +207,61 @@ div.circle{
     border: 4px solid var(--main-color);
     font-family: 'Poppins', sans-serif;
     background-color: var(--main-color);
-    /*color: white;*/
+    user-select: none;
+    cursor: pointer;
+    transition: transform 70ms;
 }
 
-.circle.outline{
-    background-color: transparent !important;
-    /*color: #1dd985;*/
+.circle:after{
+    content: '';
+    box-shadow: 0 0 0 var(--main-color);
+    transition: box-shadow 0.5s;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    border-radius: 100%;
+}
+
+.circle:active{
+    transform: scale(0.95);
+}
+
+.circle.openable{
+    z-index: 99999999;
+}
+
+.circle.open:after{
+    content: '';
+    box-shadow: 0 0 0 15in var(--main-color);
+}
+
+.circle .application-info{
+    opacity: 0;
+    transition: opacity 0.2s;
+    position: absolute;
+    top: 3in;
+    left: 0;
+    right:0;
+    margin: 0 auto;
+    z-index: 1;
+    font-size: 0.5em;
+    width: 8.5in;
+    padding: 20px;
+    margin-left: -20px;
+}
+
+.application-info h5{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.application-info h2{
+    text-align: center;
+}
+
+.circle.open .application-info{
+    opacity: 1;
 }
 
 .centered-column{

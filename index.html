@@ -11,7 +11,7 @@
 
 <div id="root" v-cloak>
     <page>
-        <circle-callout :size="100">{{ initials() }}</circle-callout>
+        <circle-menu :size="100" :info="info">{{ initials() }}</circle-menu>
         <div class="right-top-header">
             <h1 class="">{{ applicant }}</h1>
             <h3 class="">{{ role }}</h3>
@@ -82,6 +82,11 @@
 <script src="data.js"></script>
 <script>
     window.addEventListener("load", function () {
+        DATA.info = {
+            appVersion:'1.1.2b',
+            resumeVersion: DATA.resumeVersion
+        };
+        DATA.infoOpen = false;
         Resume = new Vue({
             el:"#root",
             data:DATA,
@@ -89,8 +94,7 @@
                 initials:function () {
                     let name = this.applicant.split(" ");
                     return name[0][0] + name[1][0];
-                },
-
+                }
             },
             computed:{
                 skillsHaveExperience:function () {
