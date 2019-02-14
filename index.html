@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
-
+<div id="drop-target" v-if="visible" v-cloak="">Drop Job Description Text Here</div>
 <div id="root" v-cloak>
+
     <page>
         <circle-menu :size="100" :info="info">{{ initials() }}</circle-menu>
         <div class="right-top-header">
@@ -19,11 +20,11 @@
         </div>
 
         <resume-content>
-            <column width="35">
+            <column width="37">
                 <simple-section name="Objective"><p>{{objective}}</p></simple-section>
                 <skills :data="skills.slice(0, primarySkills)" header="Skills"></skills>
             </column>
-            <column width="62">
+            <column width="60">
                 <experience :data="experience"></experience>
                 <education :data="education"></education>
             </column>
@@ -66,10 +67,10 @@
     </page>
     <page>
         <resume-content>
-            <column width="35">
+            <column width="37">
                 <skills :data="skills.slice(primarySkills, primarySkills + secondarySkills)" header="Skills Overflow"></skills>
             </column>
-            <column width="62">
+            <column width="60">
                 <projects :data="projects"></projects>
             </column>
         </resume-content>
@@ -115,9 +116,19 @@
 
             }
         });
-        document.title = `${DATA.resumeName} - ${DATA.applicant}`;
 
-    })
+        DropTarget = new Vue({
+            el:"#drop-target",
+            data:{
+                visible:false
+            }
+        });
+        document.title = `${DATA.resumeName} - ${DATA.applicant}`;
+    });
+
+    function TailorResumeToJobDescription(event){
+        var clipText = event.clipboardData.getData('Text');
+    }
 </script>
 </body>
 </html>

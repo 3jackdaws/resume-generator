@@ -4,7 +4,7 @@ PROBLEM_TYPE = "";
 
 DATA = {
     resumeName:"General Resume",
-    resumeVersion:"2.0.3",
+    resumeVersion:"2.1.1",
     applicant:"Ian Murphy",
     role:"Software/Solution Engineer",
     website:"isogen.net",
@@ -12,8 +12,24 @@ DATA = {
     email:"ian@isogen.net",
     phone:"(503) 830 - 2275",
     github:"github.com/3jackdaws",
-    objective:`Seeking a position${COMPANY} where I can work with others to implement elegant solutions for complex${PROBLEM_TYPE} problems while also learning new technologies.`,
+    objective:`Seeking a position${COMPANY} where I can work with others to streamline processes and ensure a high level of product reliability by applying automation technologies.`,
     experience:[
+        {
+            company:"Intel with Cinder Solutions",
+            title:"Automation Engineer",
+            from:"January 2019",
+            to:"Present",
+            description:"Automated validation processes for Intel's Dynamic Tuning software solution.",
+            results:[
+
+            ],
+            technologies:[
+                "C#",
+                "Jenkins",
+                "TeamCity",
+                "Jama",
+            ]
+        },
         {
             company:"Daimler Trucks NA",
             title:"Cloud Automation Intern",
@@ -22,7 +38,6 @@ DATA = {
             description:"Lead efforts to consolidate steps involved in decommissioning enterprise infrastructure and developed self-service VM decommissioning tools. Was tasked with evaluating and supplying recommendations for the purchase of third party software that amounted to more than $200k. ",
             results:[
                 "Solved the infrastructure decommissioning \"million dollar problem\".",
-                // "Greater than 150 VM decommissioning processes completed.",
                 "Greater than 90% reduction in time to decommission VMs",
             ],
             technologies:[
@@ -54,31 +69,34 @@ DATA = {
                 "AWS",
             ]
         },
-        {
-            company:"Vobile, Inc",
-            title:"R&D Intern",
-            from:"December 2016",
-            to:"January 2017",
-            description:"Oversaw office-wide Windows 10 workstation upgrades. Performed out of box setup and installation of new workstations. ",
-            technologies:[
-                "Python",
-                "Docker",
-            ]
-        },
+        // {
+        //     company:"Vobile, Inc",
+        //     title:"R&D Intern",
+        //     from:"December 2016",
+        //     to:"January 2017",
+        //     description:"Oversaw office-wide Windows 10 workstation upgrades. Performed out of box setup and installation of new workstations. ",
+        //     technologies:[
+        //         "Python",
+        //         "Docker",
+        //     ]
+        // },
         {
             company:"Vobile, Inc",
             title:"R&D Intern",
             from:"June 2016",
-            to:"September 2016",
+            to:"January 2017",
             description:"Accelerated internal documentation software migration by designing format conversion scripts in Python. Dockerized inventory managment software. Performed intra-office tech support.",
-
+            technologies:[
+                "Python",
+                "Docker",
+            ]
 
         },
     ],
     education:[
         {
             type:"BS",
-            subject:"Software Engineering Tech",
+            subject:"Software Engineering",
             school:"Oregon Institute of Technology",
             date:"2018",
             summary:"GPA 3.61 · Emplaced a solid foundation for analyzing problems and providing practical solutions.  Courses included Software Testing, Data Structures, Design Patterns, Operating Systems, Embedded Networking, and Advanced Unix."
@@ -103,9 +121,9 @@ DATA = {
             desc:"High level of experience with web development technologies, web design, application architectures (MVC, MVT), designing scalable and fault tolerant web applications, and deploying and hosting web sites to Linux servers and Docker hosts."
         },
         {
-            name:"Django",
+            name:"Software Testing",
             level:4,
-            desc:"Proficient with Models, Forms, Middleware, Django templating, custom authentication backends.  Extensive experience with add on frameworks such as DRF and Channels."
+            desc:"Adept knowledge of testing best practices, test driven development, and behavior driven development using Gherkin and frameworks similar to Cucumber."
         },
         {
             name:"JavaScript",
@@ -113,19 +131,29 @@ DATA = {
             desc:"Proficiency with front-end JavaScript, the DOM, and knowledge of the JavaScript runtime environment."
         },
         {
+            name:"Vue.JS",
+            level:3,
+            desc:"Moderate experience designing and developing Web applications with Vue.  This resume extensively uses Vue.js."
+        },
+        {
             name:"Amazon Web Services",
             level:3,
             desc:"Experience with EC2, ECS, Lambda, and API Gateway services.  Experience converting existing software solutions into AMIs."
         },
         {
-            name:"Software Testing",
-            level:4,
-            desc:"Adept knowledge of testing best practices, test driven development and behavior driven development using frameworks similar to Cucumber."
+            name:"C/C++",
+            level:3.5,
+            desc:"Experience includes embedded networking and low level Linux development. Moderately experienced with C++ and many language constructs."
         },
+        // {
+        //     name:"Django",
+        //     level:4,
+        //     desc:"Proficient with Models, Forms, Middleware, Django templating, custom authentication backends.  Extensive experience with add on frameworks such as DRF and Channels."
+        // },
         {
-            name:"RESTful API Design",
-            level:4,
-            desc:"Extensive experience designing and developing RESTful APIs for Web Applications and Services."
+            name:"C#",
+            level:3,
+            desc:"Moderate experience writing Xamarin apps and Unity game logic.  Much formal schooling, including Testing and Design Patterns was in C#."
         },
         {
             name:"Jenkins",
@@ -133,20 +161,10 @@ DATA = {
             desc:"Experience using Jenkins to automate software distribution and site reliability tests."
         },
         {
-            name:"Java",
+            name:"Git",
             level:3,
-            desc:"Experience using Java to solve highly parallel computing problems and to create mobile apps."
+            desc:"Experience with using CLI Git and GitLab to collaborate on a team and control software versions."
         },
-        {
-            name:"Vue.JS",
-            level:3,
-            desc:"Moderate experience designing and developing Web applications with Vue.  This resume extensively uses Vue.js."
-        },
-        // {
-        //     name:"C/C++",
-        //     level:3.5,
-        //     desc:"Experience includes embedded networking and low level Linux development. Moderately experienced with C++ and many language constructs."
-        // },
         // {
         //     name:"REST Framework",
         //     level:3,
@@ -158,19 +176,19 @@ DATA = {
         //     desc:"Proficient with version 1 and 2, asynchronous programming, channel layers, background and WebSocket workers."
         // },
         {
+            name:"Java",
+            level:3,
+            desc:"Experience using Java to solve highly parallel computing problems and to create mobile apps."
+        },
+        {
+            name:"RESTful API Design",
+            level:4,
+            desc:"Extensive experience designing and developing RESTful APIs for Web Applications and Services."
+        },
+        {
             name:"SQL - Postgres & MySQL",
             level:3,
             desc:"Intermediate knowledge of SQL syntax, dialogs, and features. Primary experience with PostgreSQL and MySQL."
-        },
-        {
-            name:"C#",
-            level:3,
-            desc:"Moderate experience writing Xamarin apps and Unity game logic.  Much formal schooling, including Testing and Design Patterns was in C#."
-        },
-        {
-            name:"Git",
-            level:3,
-            desc:"Experience with using CLI Git and GitLab to collaborate on a team and control software versions."
         },
         {
             name:"Node.js",

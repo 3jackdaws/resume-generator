@@ -144,7 +144,7 @@ Vue.component("circle-menu", {
             <div class="initial" v-if="!open">
                 <slot></slot>
             </div>
-            <div v-if="open" title="Close">X</div>
+            <div v-if="open" title="Close"><span class="close icon">×</span></div>
             <div class="application-info" @click.stop="">
                 <div>
                     <h5>Application Version</h5> 
@@ -181,4 +181,10 @@ Vue.component("circle-menu", {
         }
     }
 
+});
+
+
+Vue.component("drop-target", {
+    props:["visible"],
+    template:`<div v-if="visible" class="drop-target">Drop Job Description Text Here</div>`,
 });
