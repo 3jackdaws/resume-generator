@@ -4,7 +4,7 @@ PROBLEM_TYPE = "";
 
 DATA = {
     resumeName:"General Resume",
-    resumeVersion:"2.1.1",
+    resumeVersion:"2.2.0",
     applicant:"Ian Murphy",
     role:"Software/Solution Engineer",
     website:"isogen.net",
@@ -12,14 +12,30 @@ DATA = {
     email:"ian@isogen.net",
     phone:"(503) 830 - 2275",
     github:"github.com/3jackdaws",
-    objective:`Seeking a position${COMPANY} where I can work with others to streamline processes and ensure a high level of product reliability by applying automation technologies.`,
+    profile:`Results driven, semi-perfectionist, multi-language web application engineer who is highly motivated, flexible, and team oriented.`,
     experience:[
+        {
+            company:"Daimler Trucks NA",
+            title:"Web Application Engineer",
+            from:"March 2019",
+            to:"Present",
+            description:"",
+            results:[
+
+            ],
+            technologies:[
+                "Java",
+                "WebSphere",
+                "C#",
+                "ASP"
+            ]
+        },
         {
             company:"Intel with Cinder Solutions",
             title:"Automation Engineer",
             from:"January 2019",
-            to:"Present",
-            description:"Automated validation processes for Intel's Dynamic Tuning software solution.",
+            to:"March 2019",
+            description:"Automated validation processes for Intel's Dynamic Tuning software solution.  Triaged and debugged failing tests.",
             results:[
 
             ],
@@ -27,7 +43,8 @@ DATA = {
                 "C#",
                 "Jenkins",
                 "TeamCity",
-                "Jama",
+                "BDD",
+                "Gherkin",
             ]
         },
         {
@@ -80,18 +97,18 @@ DATA = {
         //         "Docker",
         //     ]
         // },
-        {
-            company:"Vobile, Inc",
-            title:"R&D Intern",
-            from:"June 2016",
-            to:"January 2017",
-            description:"Accelerated internal documentation software migration by designing format conversion scripts in Python. Dockerized inventory managment software. Performed intra-office tech support.",
-            technologies:[
-                "Python",
-                "Docker",
-            ]
+        // {
+        //     company:"Vobile, Inc",
+        //     title:"R&D Intern",
+        //     from:"June 2016",
+        //     to:"January 2017",
+        //     description:"Accelerated internal documentation software migration by designing format conversion scripts in Python. Dockerized inventory managment software. Performed intra-office tech support.",
+        //     technologies:[
+        //         "Python",
+        //         "Docker",
+        //     ]
 
-        },
+        // },
     ],
     education:[
         {

@@ -10,7 +10,6 @@
 <body>
 <div id="drop-target" v-if="visible" v-cloak="">Drop Job Description Text Here</div>
 <div id="root" v-cloak>
-
     <page>
         <circle-menu :size="100" :info="info">{{ initials() }}</circle-menu>
         <div class="right-top-header">
@@ -21,7 +20,7 @@
 
         <resume-content>
             <column width="37">
-                <simple-section name="Objective"><p>{{objective}}</p></simple-section>
+                <simple-section name="Profile"><p>{{profile}}</p></simple-section>
                 <skills :data="skills.slice(0, primarySkills)" header="Skills"></skills>
             </column>
             <column width="60">
