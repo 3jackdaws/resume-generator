@@ -13,7 +13,7 @@ DATA = {
     email:"ian@isogen.net",
     phone:"(503) 830 - 2275",
     github:"github.com/3jackdaws",  
-    objective:`Seeking a position ${COMPANY} where I can apply ${SKILLS} to ${OUTCOME}.`,                                                              //for tailored resumes
+    // objective:`Seeking a position ${COMPANY} where I can apply ${SKILLS} to ${OUTCOME}.`,                                                              //for tailored resumes
     profile:`Results driven, semi-perfectionist, multi-language web application engineer who is highly motivated, flexible, and team oriented.`,    //for non-specific resumes
     displayObjective:false,         //only object OR profile can be displayed at once.  If false, profile is displayed.  If true, objective is displayed.     
     experience:[                    //professional experience
