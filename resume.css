@@ -1,7 +1,8 @@
 
 :root {
-  /*--main-color: #00d3ff;*/
   --main-color: #1dd985;
+  --headings-font: 'Poppins', sans-serif;
+  --primary-font: 'Titillium Web', serif;
 }
 
 body{
@@ -60,7 +61,7 @@ body.noscroll{
 
 h1,h2,h3,h4,h5,h6{
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--headings-font);
     margin-top:0;
 }
 
@@ -93,7 +94,7 @@ h1{
 
 h1{
     font-size: 3em;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--headings-font);
     font-weight: 800;
     text-align: center;
 }
@@ -181,14 +182,14 @@ div.column{
 
 .proficiency-header{
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--headings-font);
     font-size: 0.5em;
     float:right;
     margin-top: 10px;
 }
 
 p,span{
-    font-family: 'Titillium Web', serif;
+    font-family: var(--primary-font);
     /*font-weight: 300;*/
     font-size: 0.85em;
 }
@@ -205,7 +206,7 @@ p{
     align-items: center;
     border-radius: 500em;
     border: 4px solid var(--main-color);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--headings-font);
     background-color: var(--main-color);
     user-select: none;
     cursor: pointer;

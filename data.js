@@ -1,19 +1,22 @@
-COMPANY = "";
-PROBLEM_TYPE = "";
+COMPANY = "at Technology Corp ";
+SKILLS = "my superior technology skills";
+OUTCOME = "ensure a high level of efficiency and productivity";
 
 
 DATA = {
     resumeName:"General Resume",
-    resumeVersion:"2.2.0",
+    resumeVersion:"2.2.1",
     applicant:"Ian Murphy",
-    role:"Software/Solution Engineer",
-    website:"isogen.net",
-    linkedin:"linkedin.com/in/ian-m-murphy/",
+    role:"Software/Solution Engineer",          //what you would consider yourself, this can be the position applied for
+    website:"isogen.net",                       //your personal website
+    linkedin:"linkedin.com/in/ian-m-murphy/",   
     email:"ian@isogen.net",
     phone:"(503) 830 - 2275",
-    github:"github.com/3jackdaws",
-    profile:`Results driven, semi-perfectionist, multi-language web application engineer who is highly motivated, flexible, and team oriented.`,
-    experience:[
+    github:"github.com/3jackdaws",  
+    objective:`Seeking a position ${COMPANY} where I can apply ${SKILLS} to ${OUTCOME}.`,                                                              //for tailored resumes
+    profile:`Results driven, semi-perfectionist, multi-language web application engineer who is highly motivated, flexible, and team oriented.`,    //for non-specific resumes
+    displayObjective:false,         //only object OR profile can be displayed at once.  If false, profile is displayed.  If true, objective is displayed.     
+    experience:[                    //professional experience
         {
             company:"Daimler Trucks NA",
             title:"Web Application Engineer",
@@ -119,8 +122,8 @@ DATA = {
             summary:"GPA 3.61 · Emplaced a solid foundation for analyzing problems and providing practical solutions.  Courses included Software Testing, Data Structures, Design Patterns, Operating Systems, Embedded Networking, and Advanced Unix."
         }
     ],
-    primarySkills:6,
-    secondarySkills:20,
+    primarySkills:6,    //display this many skills on first page
+    secondarySkills:20, //display this many skills in overflow on second page
     skills:[
         {
             name:"Docker",
@@ -238,7 +241,7 @@ DATA = {
         //     desc:"Self-taught for personal web projects."
         // },
     ],
-    projects:[
+    projects:[      // this just fills up space on the second page, idk what else to put here ¯\_(ツ)_/¯
         {
             title:"Soundcloud-Lib",
             category:"API Circumvention Library",
