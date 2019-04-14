@@ -47,3 +47,18 @@ Change the column width in `index.html`.  Column width is in percents and should
     stuff and things
 </column>
 ```
+
+# Troubleshooting
+
+## The experience bars/circle things are not filled in when printing
+Make sure "Background Graphics" is checked in Chrome under "More Settings" in the Print Dialog.
+
+## Everything is squished/there's too much room at the bottom of the first page
+Try adjusting column widths and margins.  With my data, I need the margins to be set to "None" and the columns to be as wide as possible and close together to fit all the information I want to on the front page.  You can set the column widths so that they add up to 90 or so.  There will be a larger space between columns, but it will probably look fine.
+
+## The saved PDF is huge, like 700kb
+Windows' build in Save to PDF takes a picture of the webpage for some reason and creates massive files.  Try using Chrome's Save to PDF feature, it should generate a much smaller PDF with the added bonus of highlightable text and clickable links.
+
+## I don't have enough skills to fill the second page/I don't want to put personal projects
+A single page resume is fine.  Just print the first page only.  ALternatively, if you have too much job experience to fit on the first page, you can just put another "Experience" section on the back and link it.
+
