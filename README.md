@@ -3,6 +3,9 @@ A simple static site that I developed to make tailoring resumes to a specific po
 
 WARNING: Microsoft's built in Save to PDF tool in Windows 10 takes a picture of the site and generates gigantic PDF files.  Chrome's tool does it correctly and generates PDFs that are much smaller in file size.
 
+# Restrictions on Use
+This software is licensed under a modified MIT license.  The license is identical to a normal MIT license, but requires Starring this GitHub repo in order to uze the software.
+
 This project consists of four main parts:
 
 ### index.html
