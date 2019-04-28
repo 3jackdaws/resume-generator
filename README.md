@@ -6,6 +6,8 @@ WARNING: Microsoft's built in Save to PDF tool in Windows 10 takes a picture of 
 # Restrictions on Use
 This software is licensed under a modified MIT license.  The license is identical to a normal MIT license, but requires Starring this GitHub repo in order to uze the software.
 
+
+# Structure
 This project consists of four main parts:
 
 ### index.html
