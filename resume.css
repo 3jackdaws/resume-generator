@@ -1,6 +1,7 @@
 
 :root {
-  --main-color: #1dd985;
+  /* --main-color: #f88575; */
+  --main-color: #2cdefd;
   --headings-font: 'Poppins', sans-serif;
   --primary-font: 'Titillium Web', serif;
 }
@@ -52,7 +53,7 @@ body.noscroll{
 
 .page-footer{
     justify-content: space-around;
-    padding-top: 20px;
+    padding-top: 15px;
     position: absolute;
     bottom:0;
     left:0;
@@ -130,7 +131,7 @@ h1{
 }
 
 .right-top-header *:not(h1){
-    margin-bottom: -12px;
+    margin-bottom: -6px;
 }
 
 .inline-header{

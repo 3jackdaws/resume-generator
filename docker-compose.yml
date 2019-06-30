@@ -1,3 +1,6 @@
+# Use this for local development
+# Or don't ¯\_(ツ)_/¯
+
 version: '3'
 services:
   nginx:
@@ -5,3 +8,5 @@ services:
     image: rg
     ports:
       - 80:80
+    volumes:
+      - .:/usr/share/nginx/html/

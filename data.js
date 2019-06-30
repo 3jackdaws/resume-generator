@@ -5,10 +5,10 @@ OUTCOME = "ensure a high level of efficiency and productivity";
 
 DATA = {
     resumeName:"General Resume",
-    resumeVersion:"2.2.1",
+    resumeVersion:"2.3.0",
     applicant:"Ian Murphy",
-    role:"Software/Solution Engineer",          //what you would consider yourself, this can be the position applied for
-    website:"isogen.net",                       //your personal website
+    role:"Web Application Engineer",          //what you would consider yourself, this can be the position applied for
+    website:"http://ianmurphy.dev",                       //your personal website
     linkedin:"linkedin.com/in/ian-m-murphy/",   
     email:"ian@isogen.net",
     phone:"(503) 830 - 2275",
@@ -19,18 +19,22 @@ DATA = {
     experience:[                    //professional experience
         {
             company:"Daimler Trucks NA",
-            title:"Web Application Engineer",
+            title:"Web App Engineer",
             from:"March 2019",
             to:"Present",
-            description:"",
+            description:"Served as Lead Application Engineer for highly critical, customer-facing, commercial vehicle information systems.  Acted as sole support developer for several internal applications using multiple different languages and web frameworks.",
             results:[
 
             ],
             technologies:[
                 "Java",
+                "Spring Boot",
+                "Apache Struts",
                 "WebSphere",
+                "Urban Code",
+                "Dojo Toolkit",
+                "ASP Classic",
                 "C#",
-                "ASP"
             ]
         },
         {
@@ -136,6 +140,11 @@ DATA = {
             desc:"Extreme proficiency with Python, its constructs, best practices, advantages and shortfalls.  Extensive knowledge of available libraries and PIP"
         },
         {
+            name:"Java",
+            level:4,
+            desc:"Experience engineering enterprise web applications using multiple Java web frameworks (Struts, Spring Boot)"
+        },
+        {
             name:"Web Development",
             level:4,
             desc:"High level of experience with web development technologies, web design, application architectures (MVC, MVT), designing scalable and fault tolerant web applications, and deploying and hosting web sites to Linux servers and Docker hosts."
@@ -195,11 +204,6 @@ DATA = {
         //     level:4,
         //     desc:"Proficient with version 1 and 2, asynchronous programming, channel layers, background and WebSocket workers."
         // },
-        {
-            name:"Java",
-            level:3,
-            desc:"Experience using Java to solve highly parallel computing problems and to create mobile apps."
-        },
         {
             name:"RESTful API Design",
             level:4,
