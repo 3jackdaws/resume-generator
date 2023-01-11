@@ -11,7 +11,7 @@ DATA = {
     website:"http://ianmurphy.dev",                       //your personal website
     linkedin:"linkedin.com/in/ian-m-murphy/",   
     email:"ian@isogen.net",
-    phone:"(503) 830 - 2275",
+    phone:"555-123-4567",
     github:"github.com/3jackdaws",  
     // objective:`Seeking a position ${COMPANY} where I can apply ${SKILLS} to ${OUTCOME}.`,                                                              //for tailored resumes
     profile:`Results driven, semi-perfectionist, multi-language web application engineer who is highly motivated, flexible, and team oriented.`,    //for non-specific resumes
